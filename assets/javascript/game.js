@@ -29,8 +29,8 @@ $(document).ready(function () {
     //     console.log(opponentHealth);
     //     console.log(characterAttackPower);
     // });
-    
-    var characterSelectionFunction = function(boxClicked) {
+
+    var characterSelectionFunction = function (boxClicked) {
         if (isEmpty < 1) {
             heroSelected = boxClicked;
             characterHealth = ($(boxClicked).attr('hitPoints'));
@@ -38,8 +38,6 @@ $(document).ready(function () {
             isEmpty = 1;
             $('.remainingOpponents').append($(boxClicked).parent('.characterSelection'));
             $('.hero').append(boxClicked);
-
-
         } else if (isEmpty < 2 && heroSelected !== boxClicked) {
             enemySelected = boxClicked;
             opponentHealth = ($(boxClicked).attr('hitPoints'));
@@ -51,13 +49,9 @@ $(document).ready(function () {
         console.log(characterAttackPower);
     };
 
-
     $('.characterBox').on('click', function () {
         characterSelectionFunction(this);
     });
-        
-
-
 
     $('.execute').on('click', function () {
         if (characterHealth > 0 && opponentHealth > 0) {
@@ -77,12 +71,12 @@ $(document).ready(function () {
                 $('.characterBox').on('click', function () {
                     characterSelectionFunction(this);
                 });
-           }
+            }
             //If player is killed from counter-attack, display death message
             if (characterHealth <= 0) {
                 console.log("You're daed");
                 //If platter was killed 
-            } 
+            }
             console.log(characterHealth);
             console.log(opponentHealth);
             console.log(characterAttackPower);
