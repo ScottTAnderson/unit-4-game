@@ -5,23 +5,25 @@
 }
 
 html, body {
+   background-color: black;
+   background-image: url("../images/backgroundbattle.jpg");
+   background-size: cover;
+   background-position: center top;
+   width: 100%;
    height: 100%;
 }
 
 .gameArea {
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-image: url("../images/backgroundbattle.jpg");
-    width: 100%;
-    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 header {
     color: black;
     text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;
     float: right;
-    margin-right: 20px;
+    margin-right: 10%;
+    margin-top: 5%;
     font-size: 40px;
 }
 
@@ -78,9 +80,10 @@ h2 {
 }
 
 .fightControls {
-    height: 225px;
+    height: 100px;
 }
-/* 
-#hero:empty {
-    display: none;
-} */
+
+.damageReport {
+    color: orangered;
+
+}
